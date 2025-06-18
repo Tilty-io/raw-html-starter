@@ -1,0 +1,38 @@
+<include file="src/layout/common.html" $title="index">
+  <include file="src/components/heading.html" $tag="h3">Here is index.html</include>
+
+  <p>
+    This is a raw HTML starter built with Vite.
+  </p>
+
+  <include file="src/components/card.html">
+    <template slot="title">Welcome</template>
+    <template slot="content">
+      <p>This is a raw HTML starter built with Vite.</p>
+      <img src="/images/test.jpg" alt="Demo image" />
+    </template>
+    <template slot="footer">
+      <include file="src/components/button.html" class="success" title="Get Started">
+        Get Started
+      </include>
+    </template>
+  </include>
+
+  <include file="src/components/card.html">
+    <template slot="title">vite-plugin-html-include</template>
+    <template slot="content">
+      <p>A Vite plugin to include partial HTML files with variable interpolation and slot support — dead simple and fast.</p>
+      <img src="/images/test.jpg" alt="Demo image" />
+    </template>
+    <template slot="footer">
+      <include file="src/components/button.html" class="warning" title="Get Started">
+        Cancel
+      </include>
+      <include file="src/components/button.html" class="success"
+               href="https://github.com/Tilty-io/vite-plugin-html-include" target="_blank">
+        Documentation
+      </include>
+    </template>
+  </include>
+
+</include>

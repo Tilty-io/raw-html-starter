@@ -1,0 +1,43 @@
+<include file="/src/layout/common.html" $title="article">
+  <include file="src/components/heading.html">
+    Icons demo
+  </include>
+  <div>
+    <p>
+      Icons are located in the <b>src/icons</b> directory.
+    </p>
+
+    <h3>Material design icons exemples</h3>
+    <include file="src/icons/mdi/account-circle.svg" class="icon mdi" style="color: brown;" />
+    <include file="src/icons/mdi/material-design.svg" class="icon mdi" style="color: goldenrod;" />
+
+    <h3>Lucide icons exemples</h3>
+    <include file="src/icons/lucide/heart-pulse.svg" class="icon lucide" style="color: lightgreen;" />
+    <include file="src/icons/lucide/squirrel.svg" class="icon lucide" style="color: sienna;" />
+
+    <h3>Lucide icons thin exemples</h3>
+    <include file="src/icons/lucide-thin/heart-pulse.svg" class="icon lucide" style="color: springgreen;" />
+    <include file="src/icons/lucide-thin/squirrel.svg" class="icon lucide" style="color: darkgoldenrod;" />
+    
+    <h3>Phosphor icons exemples</h3>
+    <include file="src/icons/phosphor/phosphor-logo.svg" class="icon pho" style="color: green;" />
+    <include file="src/icons/phosphor/phosphor-logo-light.svg" class="icon phosphor" style="color: orange;" />
+    <include file="src/icons/phosphor/phosphor-logo-duotone.svg" class="icon phosphor" style="color: purple;" />
+
+    <h2>Composant icon</h2>
+    <include file="/src/components/icon.html"
+             $icon="phosphor/phosphor-logo-duotone.svg"
+             $size="32"
+             $color="#ff0066" />
+    <include file="/src/components/icon.html"
+             $icon="lucide-thin/squirrel.svg"
+             $size="32"
+             $color="#ff0066" />
+    <include file="/src/components/icon.html"
+             $icon="mdi/material-design.svg"
+             $size="32"
+             $color="#ff0066" />
+
+  </div>
+
+</include>
