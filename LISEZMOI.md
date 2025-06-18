@@ -6,11 +6,14 @@ Un starter kit moderne pour le développement de sites web en **HTML brut** (pas
 
 ## Fonctionnalités
 
-- Vite pour un développement ultra-rapide
-- Support SCSS natif avec auto-import des composants
-- Système de composants HTML modulaires
+- Développement ultra-rapide avec Vite
+- SCSS natif et auto-import des composants
+- Système de composants HTML réutilisables
+- Prêt pour le multi-pages
 - Hot Module Replacement (HMR)
 - Support TypeScript
+- [Documentation complète](LISEZMOI.md)
+- [Galerie interactive d'icônes](icons-gallery.html)
 
 ## Installation
 

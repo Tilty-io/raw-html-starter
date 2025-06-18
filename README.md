@@ -6,11 +6,14 @@ A modern starter kit for building websites in **plain HTML** (no React, no Vue, 
 
 ## Features
 
-- Vite for ultra-fast development
-- Native SCSS support with auto-import of components
-- Modular HTML component system
+- Ultra-fast development with Vite
+- Native SCSS and auto-import of components
+- Reusable HTML component system
+- Multi-page ready
 - Hot Module Replacement (HMR)
 - TypeScript support
+- [Full documentation](README.md)
+- [Interactive icon gallery](icons-gallery.html)
 
 ## Installation
 
