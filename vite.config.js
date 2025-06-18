@@ -6,7 +6,9 @@ import iconsGalleryPlugin from "./vite/iconsGalleryPlugin";
 
 export default defineConfig({
     plugins: [
+        // Plugin to include HTML files in the build process with slots and variables
         htmlInclude(),
+        // Automatically import all SCSS files from specified directories
         viteAutoImportScss([
             {
                 inputDir: 'src/components/**/*.scss',
@@ -17,6 +19,7 @@ export default defineConfig({
                 outputFile: 'src/styles/layout-all.scss'
             }
         ]),
+        // Plugin to generate an icons gallery HTML file
         iconsGalleryPlugin({
             dirs: ['src/icons'],
             output: 'icons-gallery.html'
