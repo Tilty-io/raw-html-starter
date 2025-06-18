@@ -1,38 +1,96 @@
-<include file="src/layout/common.html" $title="index">
-  <include file="src/components/heading.html" $tag="h3">Here is index.html</include>
+<include file="src/layout/common.html" $title="Raw HTML Starter">
+  <include file="src/components/heading.html" $tag="h2">
+    Raw HTML Starter
+  </include>
 
   <p>
-    This is a raw HTML starter built with Vite.
+    <b>A modern starter for building websites in <u>plain HTML</u> — no React, no Vue, no heavy JS frameworks.</b><br>
+    Enjoy the simplicity of HTML with the power of Vite, SCSS, includes, and modular components.
   </p>
 
-  <include file="src/components/card.html">
-    <template slot="title">Welcome</template>
-    <template slot="content">
-      <p>This is a raw HTML starter built with Vite.</p>
-      <img src="/images/test.jpg" alt="Demo image" />
-    </template>
-    <template slot="footer">
-      <include file="src/components/button.html" class="success" title="Get Started">
-        Get Started
-      </include>
-    </template>
-  </include>
+  <ul>
+    <li>Ultra-fast development with Vite</li>
+    <li>Native SCSS and auto-import of components</li>
+    <li>Reusable HTML component system</li>
+    <li>Multi-page ready</li>
+    <li>Hot Module Replacement (HMR)</li>
+    <li>TypeScript support</li>
+    <li><a href="README.md">Full documentation</a></li>
+    <li><a href="icons-gallery.html">Interactive icon gallery</a></li>
+  </ul>
+
+  <br>
 
   <include file="src/components/card.html">
     <template slot="title">vite-plugin-html-include</template>
     <template slot="content">
-      <p>A Vite plugin to include partial HTML files with variable interpolation and slot support — dead simple and fast.</p>
-      <img src="/images/test.jpg" alt="Demo image" />
+      <b>vite-plugin-html-include</b> is the secret sauce of this starter.<br>
+      It lets you use HTML includes, slots, and variables in your pages and components.<br>
+      <span style="color: #2b90d9; font-weight: bold;">It's just awesome for building modular HTML!</span>
     </template>
     <template slot="footer">
-      <include file="src/components/button.html" class="warning" title="Get Started">
-        Cancel
-      </include>
-      <include file="src/components/button.html" class="success"
-               href="https://github.com/Tilty-io/vite-plugin-html-include" target="_blank">
-        Documentation
+      <include file="src/components/button.html" class="success" href="https://github.com/Tilty-io/vite-plugin-html-include" target="_blank">
+        See documentation
       </include>
     </template>
   </include>
 
+  <include file="src/components/card.html">
+    <template slot="title">Font embedding example</template>
+    <template slot="content">
+      The starter includes an example of font embedding with the
+      <span style="font-family: var(--font-sharpie), cursive; font-size: 1.3em;">Sharpie</span>
+      font (see <code>public/fonts/</code> and <code>src/styles/typography.scss</code>).
+    </template>
+  </include>
+
+  <include file="src/components/card.html">
+    <template slot="title">SVG icons</template>
+    <template slot="content">
+      All your SVG icons are organized by family in <code>src/icons/</code>.<br>
+      Use the <code>icon.html</code> component to embed any icon with size and color control.<br>
+      <pre><code>&lt;include file="/src/components/icon.html" $icon="lucide/heart-pulse.svg" $size="48" $color="#ff3399" /&gt;</code></pre>
+      <div style="display: flex; gap: 1.5em; align-items: center; margin: 1em 0;">
+        <include file="/src/components/icon.html" $icon="lucide/heart-pulse.svg" $size="36" $color="#ff3399" />
+        <include file="/src/components/icon.html" $icon="lucide/squirrel.svg" $size="36" $color="#2b90d9" />
+        <include file="/src/components/icon.html" $icon="phosphor/cat-thin.svg" $size="36" $color="#222" />
+        <include file="/src/components/icon.html" $icon="phosphor/phosphor-logo-duotone.svg" $size="36" $color="#ffb300" />
+      </div>
+    </template>
+    <template slot="footer">
+      <include file="src/components/button.html" class="success" href="icons-gallery.html">
+        See interactive icon gallery
+      </include>
+    </template>
+  </include>
+
+
+
+  <include file="src/components/card.html">
+    <template slot="title">Project structure</template>
+    <template slot="content">
+      <pre><code>src/
+  components/   <span class="comment"># Reusable HTML/SCSS components</span>
+  layout/       <span class="comment"># Layouts and global structure (common.html, nav, footer...)</span>
+  styles/       <span class="comment"># Global SCSS (auto-imported)</span>
+  icons/        <span class="comment"># SVG icon sets (by family)</span>
+public/
+  images/       <span class="comment"># Site images</span>
+  fonts/        <span class="comment"># Fonts (e.g. Sharpie)</span>
+vite/
+  getHtmlEntryPoints.ts   <span class="comment"># HTML entry points for Vite</span>
+  viteAutoImportScss.ts   <span class="comment"># SCSS auto-import plugin</span>
+  iconsGalleryPlugin.ts   <span class="comment"># Icon gallery generator plugin</span>
+  icons-gallery.css       <span class="comment"># Icon gallery styles</span>
+dist/           <span class="comment"># Build output</span>
+</code></pre>
+      <style>
+        pre code .comment {
+          color: #b0b0b0;
+        }
+      </style>
+    </template>
+  </include>
+
 </include>
+

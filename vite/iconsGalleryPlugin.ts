@@ -11,7 +11,7 @@ interface IconsGalleryOptions {
 function escapeHtml(str: string) {
   return str.replace(/[&<>'"]/g, (c) => ({
     '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;'
-  }[c]));
+  }[c] || c));
 }
 
 async function generateIconsGallery(options: IconsGalleryOptions, warn: (msg: string) => void) {
