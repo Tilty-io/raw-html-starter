@@ -5,6 +5,7 @@ import viteAutoImportScss from "./vite/viteAutoImportScss";
 import iconsGalleryPlugin from "./vite/iconsGalleryPlugin";
 
 export default defineConfig({
+     base: '/raw-html-starter/',
     plugins: [
         // Plugin to include HTML files in the build process with slots and variables
         htmlInclude(),
