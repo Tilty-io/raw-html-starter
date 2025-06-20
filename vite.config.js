@@ -36,6 +36,7 @@ export default defineConfig({
             '@comp': 'src/components/',
             '@layout': 'src/layout/',
             '@icons': 'src/icons/',
+            '@style': 'src/styles/',
             // ...others alias
         }
     }

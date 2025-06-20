@@ -73,6 +73,27 @@ npm run dev
 └── dist/                    # Dossier de build
 ```
 
+## Alias disponibles
+
+Pour simplifier l'import des composants et ressources, le projet utilise plusieurs alias :
+
+- `@comp` : Pointe vers `src/components/`
+  ```html
+  <include file="@comp/button.html" />
+  ```
+
+- `@layout` : Pointe vers `src/layout/`
+  ```html
+  <include file="@layout/common.html" />
+  ```
+
+- `@icons` : Pointe vers `src/icons/`
+  ```html
+  <include file="@comp/icon.html" $icon="@icons/lucide/heart.svg" />
+  ```
+
+Ces alias permettent d'éviter les chemins relatifs complexes et rendent le code plus maintenable. Ils sont configurés dans le fichier `vite.config.ts` et fonctionnent aussi bien dans les fichiers HTML que SCSS.
+
 ## Layout principal
 
 Le layout principal (`src/layout/common.html`) définit la structure globale de toutes les pages du site : balise `<html>`, `<head>`, `<body>`, header, navigation, footer, etc.
@@ -84,8 +105,8 @@ Le layout principal (`src/layout/common.html`) définit la structure globale de 
 **Exemple d'utilisation dans une page** :
 
 ```html
-<include file="src/layout/common.html" $title="Accueil">
-  <include file="src/components/heading.html">Bienvenue !</include>
+<include file="@layout/common.html" $title="Accueil">
+  <include file="@comp/heading.html">Bienvenue !</include>
   <p>Contenu de la page d'accueil…</p>
 </include>
 ```
@@ -97,7 +118,7 @@ Pour modifier l'apparence globale, ajouter des scripts, des polices, etc., il su
 Le projet utilise un système de composants basé sur des includes HTML. Exemple :
 
 ```html
-<include file="src/components/card.html">
+<include file="@comp/card.html">
   <template slot="title">Titre de la carte</template>
   <template slot="content">
     Contenu de la carte
@@ -118,18 +139,5 @@ Les styles sont organisés en modules SCSS dans le dossier `styles/`. Les fichie
 - Exemple d'utilisation du composant :
 
 ```html
-<include file="/src/components/icon.html" $icon="lucide/heart-pulse.svg" $size="48" $color="#ff3399" />
+<include file="@comp/icon.html" $icon="@icons/lucide/heart-pulse.svg" $size="48" $color="#ff3399" />
 ```
-
-- Les props `$icon`, `$size` (en px) et `$color` (hex ou nom CSS) sont supportées
-- Le composant applique la taille et la couleur via des variables CSS pour une intégration flexible
-
-### Galerie d'icônes interactive
-
-- Une page de galerie d'icônes est générée automatiquement : **icons-gallery.html**
-- Elle permet de prévisualiser toutes les icônes du projet, de changer dynamiquement la taille et la couleur, et de copier le code d'inclusion
-- Accès rapide via la navigation du site
-
-## Documentation
-
-Pour plus d'informations sur le plugin vite-plugin-html-include, consultez la [documentation officielle](https://github.com/Tilty-io/vite-plugin-html-include).
