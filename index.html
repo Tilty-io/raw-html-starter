@@ -1,5 +1,5 @@
-<include file="src/layout/common.html" $title="Raw HTML Starter">
-  <include file="src/components/heading.html" $tag="h2">
+<include file="@layout/common.html" $title="Raw HTML Starter">
+  <include file="@comp/heading.html" $tag="h2">
     Raw HTML Starter
   </include>
 
@@ -21,7 +21,7 @@
 
   <br>
 
-  <include file="src/components/card.html">
+  <include file="@comp/cardzzz.html">
     <template slot="title">vite-plugin-html-include</template>
     <template slot="content">
       <b>vite-plugin-html-include</b> is the secret sauce of this starter.<br>
@@ -29,13 +29,13 @@
       <span style="color: #2b90d9; font-weight: bold;">It's just awesome for building modular HTML!</span>
     </template>
     <template slot="footer">
-      <include file="src/components/button.html" class="success" href="https://github.com/Tilty-io/vite-plugin-html-include" target="_blank">
+      <include file="@comp/button.html" class="success" href="https://github.com/Tilty-io/vite-plugin-html-include" target="_blank">
         See documentation
       </include>
     </template>
   </include>
 
-  <include file="src/components/card.html">
+  <include file="@comp/card.html">
     <template slot="title">Font embedding example</template>
     <template slot="content">
       The starter includes an example of font embedding with the
@@ -44,21 +44,21 @@
     </template>
   </include>
 
-  <include file="src/components/card.html">
+  <include file="@comp/card.html">
     <template slot="title">SVG icons</template>
     <template slot="content">
       All your SVG icons are organized by family in <code>src/icons/</code>.<br>
       Use the <code>icon.html</code> component to embed any icon with size and color control.<br>
-      <pre><code>&lt;include file="/src/components/icon.html" $icon="lucide/heart-pulse.svg" $size="48" $color="#ff3399" /&gt;</code></pre>
+      <pre><code>&lt;include file="@comp/icon.html" $icon="lucide/heart-pulse.svg" $size="48" $color="#ff3399" /&gt;</code></pre>
       <div style="display: flex; gap: 1.5em; align-items: center; margin: 1em 0;">
-        <include file="/src/components/icon.html" $icon="lucide/heart-pulse.svg" $size="36" $color="#ff3399" />
-        <include file="/src/components/icon.html" $icon="lucide/squirrel.svg" $size="36" $color="#2b90d9" />
-        <include file="/src/components/icon.html" $icon="phosphor/cat-thin.svg" $size="36" $color="#222" />
-        <include file="/src/components/icon.html" $icon="phosphor/phosphor-logo-duotone.svg" $size="36" $color="#ffb300" />
+        <include file="@comp/icon.html" $icon="lucide/heart-pulse.svg" $size="36" $color="#ff3399" />
+        <include file="@comp/icon.html" $icon="lucide/squirrel.svg" $size="36" $color="#2b90d9" />
+        <include file="@comp/icon.html" $icon="phosphor/cat-thin.svg" $size="36" $color="#222" />
+        <include file="@comp/icon.html" $icon="phosphor/phosphor-logo-duotone.svg" $size="36" $color="#ffb300" />
       </div>
     </template>
     <template slot="footer">
-      <include file="src/components/button.html" class="success" href="icons-gallery.html">
+      <include file="@comp/button.html" class="success" href="icons-gallery.html">
         See interactive icon gallery
       </include>
     </template>
@@ -66,7 +66,7 @@
 
 
 
-  <include file="src/components/card.html">
+  <include file="@comp/card.html">
     <template slot="title">Project structure</template>
     <template slot="content">
       <pre><code>src/

@@ -5,7 +5,7 @@ import viteAutoImportScss from "./vite/viteAutoImportScss";
 import iconsGalleryPlugin from "./vite/iconsGalleryPlugin";
 
 export default defineConfig({
-     base: '/raw-html-starter/',
+    base: '/raw-html-starter/',
     plugins: [
         // Plugin to include HTML files in the build process with slots and variables
         htmlInclude(),
@@ -29,6 +29,14 @@ export default defineConfig({
     build: {
         rollupOptions: {
             input: getHtmlEntryPoints()
+        }
+    },
+    resolve: {
+        alias: {
+            '@comp': 'src/components/',
+            '@layout': 'src/layout/',
+            '@icons': 'src/icons/',
+            // ...others alias
         }
     }
 })

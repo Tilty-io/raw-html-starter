@@ -13,5 +13,7 @@
     "esModuleInterop": true
   },
   "include": [
-    "vite.config.js", "plugins/**/*.ts"]
+    "vite.config.js", 
+    "vite/**/*.ts"
+  ]
 }
