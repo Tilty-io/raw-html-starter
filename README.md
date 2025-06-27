@@ -1,8 +1,10 @@
 # Raw HTML Starter
 
-> Documentation en français disponible dans [LISEZMOI.md](./LISEZMOI.md)
+> Documentation en français disponible dans [LISEZMOI.md](https://github.com/Tilty-io/raw-html-starter/blob/main/LISEZMOI.md)
 
 A modern starter kit for building websites in **plain HTML** (no React, no Vue, no heavy JS frameworks—just good old HTML, simple, fast, and efficient). Perfect for those who want full control, go straight to the point, or simply enjoy modern tooling (Vite, SCSS, includes, components) without the bloat of a framework.
+
+**[Demo: View the live demo on GitHub Pages](https://tilty-io.github.io/raw-html-starter/)**
 
 ## Features
 
@@ -12,14 +14,14 @@ A modern starter kit for building websites in **plain HTML** (no React, no Vue, 
 - Multi-page ready
 - Hot Module Replacement (HMR)
 - TypeScript support
-- [Full documentation](README.md)
-- [Interactive icon gallery](icons-gallery.html)
+- [Full documentation](https://github.com/Tilty-io/raw-html-starter/blob/main/README.md)
+- [Interactive icon gallery](https://tilty-io.github.io/raw-html-starter/icons-gallery.html)
 
 ## Installation
 
 ```bash
 # Clone the project
-git clone [REPO_URL]
+git clone https://github.com/Tilty-io/raw-html-starter.git
 
 # Install dependencies
 npm install

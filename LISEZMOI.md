@@ -1,6 +1,6 @@
 # Raw HTML Starter
 
-> English documentation available in [README.md](./README.md)
+> English documentation available in [README.md](https://github.com/Tilty-io/raw-html-starter/blob/main/README.md)
 
 Un starter kit moderne pour le développement de sites web en **HTML brut** (pas de React, pas de Vue, pas de framework JS complexe : ici, c'est du bon vieux HTML, simple, rapide et efficace). Idéal pour ceux qui veulent garder le contrôle, aller à l'essentiel, ou simplement profiter de la puissance des outils modernes (Vite, SCSS, includes, composants) sans la lourdeur d'un framework.
 
@@ -12,14 +12,14 @@ Un starter kit moderne pour le développement de sites web en **HTML brut** (pas
 - Prêt pour le multi-pages
 - Hot Module Replacement (HMR)
 - Support TypeScript
-- [Documentation complète](LISEZMOI.md)
-- [Galerie interactive d'icônes](icons-gallery.html)
+- [Documentation complète](https://github.com/Tilty-io/raw-html-starter/blob/main/LISEZMOI.md)
+- [Galerie interactive d'icônes](https://tilty-io.github.io/raw-html-starter/icons-gallery.html)
 
 ## Installation
 
 ```bash
 # Cloner le projet
-git clone [URL_DU_REPO]
+git clone https://github.com/Tilty-io/raw-html-starter.git
 
 # Installer les dépendances
 npm install
