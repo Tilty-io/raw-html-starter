@@ -8,13 +8,13 @@
     "watch:build": "vite build --watch"
   },
   "dependencies": {
-    "glob": "^11.0.3"
+    "glob": "^11.0.3",
+    "vite-plugin-html-include": "^1.4.0"
   },
   "devDependencies": {
     "@types/node": "^24.0.2",
+    "fast-glob": "^3.3.2",
     "sass": "^1.75.0",
-    "vite": "^6.0.0",
-    "vite-plugin-html-include": "../vite-plugin-html-include",
-    "fast-glob": "^3.3.2"
+    "vite": "^6.0.0"
   }
 }
