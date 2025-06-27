@@ -3,7 +3,7 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [ "main" ]  # Ou "master" selon votre branche principale
+    branches: [ "main" ]
   workflow_dispatch:
 
 permissions:
@@ -20,13 +20,19 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: 'latest'
+          node-version: '20' # Utilisation de Node.js 20 LTS
+          cache: 'npm'
 
-      - name: Install dependencies
-        run: npm ci
+      - name: Clean install
+        run: |
+          rm -rf node_modules package-lock.json
+          npm install
+          npm install @rollup/rollup-linux-x64-gnu # Installation explicite du package manquant
 
       - name: Build
-        run: npm run build
+        run: |
+          npm run build
+          ls -la dist
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
