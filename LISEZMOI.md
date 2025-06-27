@@ -15,7 +15,11 @@ Un starter kit moderne pour le développement de sites web en **HTML brut** (pas
 - [Documentation complète](https://github.com/Tilty-io/raw-html-starter/blob/main/LISEZMOI.md)
 - [Galerie interactive d'icônes](https://tilty-io.github.io/raw-html-starter/icons-gallery.html)
 
+> **Astuce** : Vous pouvez cloner rapidement ce projet en un seul clic en utilisant le bouton disponible sur la page du [dépôt GitHub](https://github.com/new?template_name=raw-html-starter&template_owner=Tilty-io). C'est la façon la plus simple de commencer sans avoir à taper de commandes.
+
 ## Installation
+
+Si vous préférez les lignes de commandes :
 
 ```bash
 # Cloner le projet

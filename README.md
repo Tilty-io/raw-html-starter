@@ -17,7 +17,13 @@ A modern starter kit for building websites in **plain HTML** (no React, no Vue, 
 - [Full documentation](https://github.com/Tilty-io/raw-html-starter/blob/main/README.md)
 - [Interactive icon gallery](https://tilty-io.github.io/raw-html-starter/icons-gallery.html)
 
+> **Tip**: You can quickly clone this project with a single click using the button available on the [GitHub repository](https://github.com/new?template_name=raw-html-starter&template_owner=Tilty-io) page. This is the easiest way to get started without typing any commands.
+
 ## Installation
+
+
+
+If you prefer using command line:
 
 ```bash
 # Clone the project
