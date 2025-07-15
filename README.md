@@ -1,10 +1,8 @@
 # Raw HTML Starter
 
-> Documentation en français disponible dans [LISEZMOI.md](https://github.com/Tilty-io/raw-html-starter/blob/main/LISEZMOI.md)
+> Documentation en français disponible dans [LISEZMOI.md](./LISEZMOI.md)
 
 A modern starter kit for building websites in **plain HTML** (no React, no Vue, no heavy JS frameworks—just good old HTML, simple, fast, and efficient). Perfect for those who want full control, go straight to the point, or simply enjoy modern tooling (Vite, SCSS, includes, components) without the bloat of a framework.
-
-**[Demo: View the live demo on GitHub Pages](https://tilty-io.github.io/raw-html-starter/)**
 
 ## Features
 
@@ -14,20 +12,14 @@ A modern starter kit for building websites in **plain HTML** (no React, no Vue, 
 - Multi-page ready
 - Hot Module Replacement (HMR)
 - TypeScript support
-- [Full documentation](https://github.com/Tilty-io/raw-html-starter/blob/main/README.md)
-- [Interactive icon gallery](https://tilty-io.github.io/raw-html-starter/icons-gallery.html)
-
-> **Tip**: You can quickly clone this project with a single click using the button available on the [GitHub repository](https://github.com/new?template_name=raw-html-starter&template_owner=Tilty-io) page. This is the easiest way to get started without typing any commands.
+- [Full documentation](README.md)
+- [Interactive icon gallery](icons-gallery.html)
 
 ## Installation
 
-
-
-If you prefer using command line:
-
 ```bash
 # Clone the project
-git clone https://github.com/Tilty-io/raw-html-starter.git
+git clone [REPO_URL]
 
 # Install dependencies
 npm install
@@ -81,27 +73,6 @@ npm run dev
 └── dist/                    # Build output
 ```
 
-## Available Aliases
-
-To simplify importing components and resources, the project uses several aliases:
-
-- `@comp`: Points to `src/components/`
-  ```html
-  <include file="@comp/button.html" />
-  ```
-
-- `@layout`: Points to `src/layout/`
-  ```html
-  <include file="@layout/common.html" />
-  ```
-
-- `@icons`: Points to `src/icons/`
-  ```html
-  <include file="@comp/icon.html" $icon="@icons/lucide/heart.svg" />
-  ```
-
-These aliases help avoid complex relative paths and make the code more maintainable. They are configured in the `vite.config.ts` file and work in both HTML and SCSS files.
-
 ## Main Layout
 
 The main layout (`src/layout/common.html`) defines the global structure of all site pages: `<html>`, `<head>`, `<body>`, header, navigation, footer, etc.
@@ -113,8 +84,8 @@ The main layout (`src/layout/common.html`) defines the global structure of all s
 **Example usage in a page:**
 
 ```html
-<include file="@layout/common.html" $title="Home">
-  <include file="@comp/heading.html">Welcome!</include>
+<include file="src/layout/common.html" $title="Home">
+  <include file="src/components/heading.html">Welcome!</include>
   <p>Homepage content…</p>
 </include>
 ```
@@ -126,7 +97,7 @@ To change the global appearance, add scripts, fonts, etc., simply edit `common.h
 The project uses a component system based on HTML includes. Example:
 
 ```html
-<include file="@comp/card.html">
+<include file="src/components/card.html">
   <template slot="title">Card Title</template>
   <template slot="content">
     Card content
@@ -147,5 +118,13 @@ Styles are organized in SCSS modules in the `styles/` folder. Component SCSS fil
 - Example usage:
 
 ```html
-<include file="@comp/icon.html" $icon="@icons/lucide/heart-pulse.svg" $size="48" $color="#ff3399" />
+<include file="/src/components/icon.html" $icon="lucide/heart-pulse.svg" $size="48" $color="#ff3399" />
 ```
+- Props `$icon`, `$size` (in px), and `$color` (hex or CSS name) are supported
+- The component applies size and color via CSS variables for flexible integration
+
+### Interactive Icon Gallery
+
+- An icon gallery page is generated automatically: **icons-gallery.html**
+- It lets you preview all project icons, change size and color live, and copy the include code
+- Quick access via the site navigation
