@@ -9,7 +9,11 @@
   },
   "dependencies": {
     "glob": "^11.0.3",
-    "vite-plugin-html-include": "^1.4.0"
+    "vite-plugin-html-include": "^1.4.1"
+  },
+  "debug-dependencies": {
+    "glob": "^11.0.3",
+    "vite-plugin-html-include": "file:../vite-plugin-html-include"
   },
   "devDependencies": {
     "@types/node": "^24.0.2",
