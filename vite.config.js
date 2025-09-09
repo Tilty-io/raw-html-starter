@@ -3,6 +3,7 @@ import htmlInclude from 'vite-plugin-html-include'
 import { getHtmlEntryPoints } from './vite/getHtmlEntryPoints.js'
 import viteAutoImportScss from "./vite/viteAutoImportScss";
 import iconsGalleryPlugin from "./vite/iconsGalleryPlugin";
+import { fileURLToPath, URL } from 'node:url';
 
 export default defineConfig({
     base: './',
@@ -33,10 +34,10 @@ export default defineConfig({
     },
     resolve: {
         alias: {
-            '@comp': 'src/components/',
-            '@layout': 'src/layout/',
-            '@icons': 'src/icons/',
-            '@style': 'src/styles/',
+            '@comp': fileURLToPath(new URL('./src/components/', import.meta.url)),
+            '@layout': fileURLToPath(new URL('./src/layout/', import.meta.url)),
+            '@icons': fileURLToPath(new URL('./src/icons/', import.meta.url)),
+            '@style': fileURLToPath(new URL('./src/styles/', import.meta.url)),
             // ...others alias
         }
     }
